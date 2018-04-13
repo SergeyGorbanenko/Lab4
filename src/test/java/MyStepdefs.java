@@ -102,4 +102,14 @@ public class MyStepdefs {
     public void theResultOfMulNumShouldBe(@Delimiter(",") List<Integer> res)  {
         Assert.assertArrayEquals(prs(res), this.arrayResult);
     }
+
+    @And("^I press 'Mul'$")
+    public void iPressMul() {
+        this.arrayResult = calc.Mul(operand1, operand2);
+    }
+
+    @Then("^The result of Mul should be (.+)$")
+    public void theResultOfMulShouldBe(@Delimiter(",") List<Integer> res) {
+        Assert.assertArrayEquals(prs(res), this.arrayResult);
+    }
 }
