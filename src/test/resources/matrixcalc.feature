@@ -26,6 +26,5 @@ Feature: Matrix Calculator
     Given I have my matrix calculator
     When I have entered 3 as matrix dimension
     And I have entered 1,2,3,1,2,3,1,2,3 as first operand
-    And I press 'Trans'
-    And I press 'Trans'
+    And I press 'TwiceTrans'
     Then The result of Trans should be 1,2,3,1,2,3,1,2,3
