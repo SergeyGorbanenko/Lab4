@@ -1,4 +1,6 @@
 import cucumber.api.Delimiter;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -39,7 +41,7 @@ public class MyStepdefs {
     }
 
     @Then("^The result should be \"([^\"]*)\"$")
-    public void theResultShouldBe(String expected) {
+    public void theResulShouldBe(String expected) {
         Assert.assertEquals(Boolean.parseBoolean(expected), this.result);
     }
 
@@ -55,4 +57,13 @@ public class MyStepdefs {
         return operand;
     }
 
+    @Then("^The result of Trans should be (.+)$")
+    public void theResultOfTransShouldBe(@Delimiter(",") List<Integer> res) {
+
+    }
+
+    @And("^I press 'Trans'$")
+    public void iPressTrans() {
+
+    }
 }

@@ -1,5 +1,5 @@
 Feature: Matrix Calculator
-  //Тест 1
+
   Scenario:
     Given I have my matrix calculator
     When I have entered 2 as matrix dimension
@@ -8,7 +8,7 @@ Feature: Matrix Calculator
     And I press 'CompareMatrix'
     Then The result should be "true"
 
-  //Тест 2
+
   Scenario:
     Given I have my matrix calculator
     When I have entered 2 as matrix dimension
@@ -17,10 +17,10 @@ Feature: Matrix Calculator
     And I press 'CompareMatrix'
     Then The result should be "false"
 
-  //Тест 3
+
   Scenario:
     Given I have my matrix calculator
     When I have entered 3 as matrix dimension
     When I have entered 1,2,3,1,2,3,1,2,3 as first operand
-    And I press 'CompareMatrix'
-    Then The result should be 1,1,1,2,2,2,3,3,3
+    And I press 'Trans'
+    Then The result of Trans should be 1,1,1,2,2,2,3,3,3
