@@ -59,3 +59,12 @@ Feature: Matrix Calculator
     And I have entered 2 as second operand
     And I press 'MulNum'
     Then The result of MulNum should be 2,4,6,8,10,12,14,16,18
+
+    #Тест 6. Умножение двух матриц
+  Scenario:
+    Given I have my matrix calculator
+    When I have entered 3 as matrix dimension
+    And I have entered 1,2,3,1,2,3,1,2,3 as first operand
+    And I have entered 1,1,1,2,2,2,3,3,3 as second operand
+    And I press 'Mul'
+    Then The result of Mul should be 14,14,14,14,14,14,14,14,14
