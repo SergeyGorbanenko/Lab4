@@ -1,4 +1,5 @@
 import cucumber.api.Delimiter;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -70,5 +71,15 @@ public class MyStepdefs {
     @And("^I press 'TwiceTrans'$")
     public void iPressTwiceTrans() {
         this.arrayResult = calc.Trans(calc.Trans(operand1));
+    }
+
+    @And("^I press 'Add'$")
+    public void iPressAdd(){
+        this.arrayResult = calc.Add(operand1, operand2);
+    }
+
+    @Then("^The result of Add should be (.+)$")
+    public void theResultOfAddShouldBe(@Delimiter(",") List<Integer> res) {
+        Assert.assertArrayEquals(prs(res), this.arrayResult);
     }
 }
