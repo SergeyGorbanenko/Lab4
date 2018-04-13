@@ -28,12 +28,12 @@ public class MyStepdefs {
     
     @When("^I have entered (.+) as first operand$")
     public void iHaveEnteredAsFirstOperand(@Delimiter(",") List<Integer> arg) {
-        this.operand2 = prs(arg);
+        this.operand1 = prs(arg);
     }
 
     @When("^I have entered (.+) as second operand$")
     public void iHaveEnteredMatrixAsSecondOperand(@Delimiter(",") List<Integer> arg){
-        this.operand1 = prs(arg);
+        this.operand2 = prs(arg);
     }
 
     @When("^I press 'CompareMatrix'$")

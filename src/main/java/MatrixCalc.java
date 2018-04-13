@@ -11,8 +11,11 @@ public class MatrixCalc {
         return true;
     }
 
-    public int[][] Trans(int[][] operand1) {
-        int[][] res = {{1,1,1}, {2,2,2}, {3,3,3}};
+    public int[][] Trans(int[][] a) {
+        int[][] res = new int[a.length][a[0].length];
+        for (int i = 0; i < a.length; i++)
+            for (int j = 0; j < a[i].length; j++)
+                res[i][j] = a[j][i];
         return res;
     }
 }
