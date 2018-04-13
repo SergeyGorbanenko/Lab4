@@ -34,4 +34,12 @@ public class MatrixCalc {
                 res[i][j] = a[i][j] - b[i][j];
         return res;
     }
+
+    public int[][] MulNum(int[][] a, int v) {
+        int[][] res = new int[a.length][a[0].length];
+        for (int i = 0; i < a.length; i++)
+            for (int j = 0; j < a[i].length; j++)
+                res[i][j] = a[i][j] * v;
+        return res;
+    }
 }

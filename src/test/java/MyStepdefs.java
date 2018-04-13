@@ -95,7 +95,7 @@ public class MyStepdefs {
 
     @And("^I press 'MulNum'$")
     public void iPressMulNum()  {
-        this.arrayResult = calc.MulNum(operand1, operand2);
+        this.arrayResult = calc.MulNum(operand1, operand2[0][0]);
     }
 
     @Then("^The result of MulNum should be (.+)$")
