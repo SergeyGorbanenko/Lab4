@@ -82,4 +82,15 @@ public class MyStepdefs {
     public void theResultOfAddShouldBe(@Delimiter(",") List<Integer> res) {
         Assert.assertArrayEquals(prs(res), this.arrayResult);
     }
+
+    @And("^I press 'Sub'$")
+    public void iPressSub() {
+        this.arrayResult = calc.Sub(operand1, operand2);
+    }
+
+    @Then("^The result of Sub should be (.+)$")
+    public void theResultOfSubShouldBe(@Delimiter(",") List<Integer> res) {
+        Assert.assertArrayEquals(prs(res), this.arrayResult);
+    }
+
 }
