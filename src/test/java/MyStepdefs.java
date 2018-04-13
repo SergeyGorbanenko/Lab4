@@ -60,7 +60,7 @@ public class MyStepdefs {
 
     @Then("^The result of Trans should be (.+)$")
     public void theResultOfTransShouldBe(@Delimiter(",") List<Integer> res) {
-        Assert.assertArrayEquals(prs(res), arrayResult);
+        Assert.assertArrayEquals(prs(res), this.arrayResult);
     }
 
     @And("^I press 'Trans'$")
