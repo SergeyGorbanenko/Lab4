@@ -67,4 +67,9 @@ public class MyStepdefs {
     public void iPressTrans() {
         this.arrayResult = calc.Trans(operand1);
     }
+
+    @And("^I press 'TwiceTrans'$")
+    public void iPressTwiceTrans() {
+        this.arrayResult = calc.Trans(calc.Trans(operand1));
+    }
 }
