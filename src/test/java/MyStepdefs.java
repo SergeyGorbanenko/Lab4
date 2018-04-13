@@ -14,6 +14,7 @@ public class MyStepdefs {
     private int[][] operand1;
     private int[][] operand2;
     private boolean result;
+    private int[][] arrayResult;
 
     @Given("^I have my matrix calculator$")
     public void iHaveMyMatrixCalculator(){
@@ -64,6 +65,6 @@ public class MyStepdefs {
 
     @And("^I press 'Trans'$")
     public void iPressTrans() {
-
+        this.arrayResult = calc.Trans(operand1);
     }
 }
