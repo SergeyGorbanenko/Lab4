@@ -41,3 +41,12 @@ Feature: Matrix Calculator
     And I have entered 1,1,1,2,2,2,3,3,3 as second operand
     And I press 'Add'
     Then The result of Add should be 2,3,4,3,4,5,4,5,6
+
+    #Тест 5. Вычитание двух матриц
+  Scenario:
+    Given I have my matrix calculator
+    When I have entered 3 as matrix dimension
+    And I have entered 2,3,4,3,4,5,4,5,6 as first operand
+    And I have entered 1,2,3,1,2,3,1,2,3 as second operand
+    And I press 'Sub'
+    Then The result of Sub should be 1,1,1,2,2,2,3,3,3
